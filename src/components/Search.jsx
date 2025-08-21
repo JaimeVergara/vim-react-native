@@ -2,15 +2,37 @@ import React, { useState } from "react";
 import { View, TextInput, Button, StyleSheet, Alert, TouchableOpacity, Text } from "react-native";
 import { VinMarca } from "../api/VinMarca";
 import { VinAño } from "../api/VinAño";
+import { VinPaisFabrica } from "../api/VinPaisFabrica";
 
-export default function Search({setSearch, setMarca, setYear}) {
+export default function Search({setSearch, setMarca, setYear, setVin, setShowResult}) {
   const [searchText, setSearchText] = useState("");
-
+  
   const handleSearch = () => {
-    Alert.alert("Buscando:", searchText);
-    setSearch(searchText);
-    setMarca(VinMarca(searchText));
-    setYear(VinAño(searchText));
+    // Alert.alert("Buscando:", searchText);
+    if (searchText.length < 17) {
+      Alert.alert("El número VIN debe tener 17 caracteres."); 
+      return;
+    }
+    else if (searchText.length > 17) {
+      Alert.alert("El número VIN no debe tener más de 17 caracteres.");
+      return;
+    }
+    else{
+      setSearch(searchText);
+      setMarca(VinMarca(searchText));
+      setYear(VinAño(searchText));
+      setVin(VinPaisFabrica(searchText));
+      setShowResult(true);
+    }
+  };
+
+  const eliminar = () => {
+    setSearch("");
+    setMarca("");
+    setYear("");
+    setVin("");
+    setSearchText("");
+    setShowResult(false);
   };
 
   return (
@@ -26,7 +48,7 @@ export default function Search({setSearch, setMarca, setYear}) {
           <TouchableOpacity onPress={handleSearch} style={styles.button}> 
               <Text>Buscar</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={handleSearch} style={styles.button}> 
+          <TouchableOpacity onPress={eliminar} style={styles.button}> 
               <Text>Cancelar</Text>
           </TouchableOpacity>
         </View>

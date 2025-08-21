@@ -1,12 +1,13 @@
 import { StyleSheet, Text, View } from "react-native";
 
-export default function CardResult({search, marca, year}) {
+export default function CardResult({search, marca, year, vin}) {
 
     return (
         <View style={styles.container}>
             <Text style={styles.texto}>Tu VIN: {search.toUpperCase()}</Text>
             <Text style={styles.texto}>Marca: {marca}</Text>
             <Text style={styles.texto}>Año: {year}</Text>
+            <Text style={styles.texto}>Pais: {vin}</Text>
         </View>
     );
 }

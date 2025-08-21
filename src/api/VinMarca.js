@@ -1840,6 +1840,6 @@ export function VinMarca (vin){
       const vinCode = vin.slice(0, 3).toUpperCase();
 
       const fabricante = vinM[vinCode];
-
+      
     return fabricante;
 }
