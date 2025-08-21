@@ -1,6 +1,6 @@
-# vim-react-native
+# Consulta información VIN 
 
-Proyecto en desarrollo que combina **React Native** con la entrada de un número de identificación de vehículo (VIM) para mostrar información de automóviles.
+Proyecto en desarrollo que combina **React Native** con la entrada de un número de identificación de vehículo (VIN) para mostrar información de automóviles.
 
 ##  Estructura del proyecto
 
@@ -36,9 +36,9 @@ Proyecto en desarrollo que combina **React Native** con la entrada de un número
 
 2. Entrar a la carpeta del proyecto
 
-   ```bash
-   cd vim-react-native
-   ```
+  ```bash
+  cd vim-react-native
+  ```
 
 3. Instalar
    
