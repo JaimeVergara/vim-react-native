@@ -29,21 +29,27 @@ Proyecto en desarrollo que combina **React Native** con la entrada de un número
 
 1. Clona el repositorio:
 
+  ```bash
+  git clone https://github.com/JaimeVergara/vim-react-native.git
+  cd vim-react-native
+  ```
+
+2. Entrar a la carpeta del proyecto
+
    ```bash
-   git clone https://github.com/JaimeVergara/vim-react-native.git
    cd vim-react-native
    ```
-   
-2. Instalar
+
+3. Instalar
    
   ```bash
   npm install
   ```
 
-3. Iniciar
+4. Iniciar
 
   ```bash
   npm start
   ```
 
-4. 
+5. Seguir intrucciones del terminal
