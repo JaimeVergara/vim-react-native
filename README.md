@@ -14,7 +14,7 @@ Proyecto en desarrollo que combina **React Native** con la entrada de un número
 
 - **React Native** – Framework móvil multiplataforma.
 - **JavaScript** – Lenguaje principal del proyecto.
-- **Expo 
+- **Expo** 
 
 ##  Requisitos previos
 
@@ -40,4 +40,10 @@ Proyecto en desarrollo que combina **React Native** con la entrada de un número
   npm install
   ```
 
-3. 
+3. Iniciar
+
+  ```bash
+  npm start
+  ```
+
+4. 
